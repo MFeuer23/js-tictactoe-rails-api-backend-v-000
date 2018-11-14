@@ -11,6 +11,7 @@ class GamesController < ApplicationController
   
   def create
     game = Game.create(state: ["", "", "", "", "", "", "", "", ""])
+    binding.pry
     render json: game.to_json
   end
 end
