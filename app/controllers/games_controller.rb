@@ -10,8 +10,7 @@ class GamesController < ApplicationController
   end
   
   def create
-    blank_state = ["", "", "", "", "", "", "", "", ""].to_json
-    Game.create(state: blank_state)
-    render "home/index"
+    game = Game.create(state: ["", "", "", "", "", "", "", "", ""])
+    render json: game.to_json
   end
 end
