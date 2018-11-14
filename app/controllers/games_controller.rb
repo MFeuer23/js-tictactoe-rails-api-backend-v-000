@@ -11,6 +11,6 @@ class GamesController < ApplicationController
   
   def create
     Game.create(state: ["", "", "", "", "", "", "", "", ""])
-    render :home
+    render "home/index"
   end
 end
